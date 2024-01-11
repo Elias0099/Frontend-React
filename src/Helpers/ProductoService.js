@@ -10,16 +10,12 @@ const ProductoService = {
             })
             .catch(error => {
                 console.error('Error fetching productos:', error);
-                throw error; // Re-lanza el error para que pueda ser manejado en la llamada del componente.
+                throw error;
             });
     },
 
     agregarProducto: (nuevoProducto) => {
         return request('POST', '/api/productos/', nuevoProducto);
-    },
-
-    obtenerProductoPorId: (id) => {
-        return request('GET', `/api/productos/${id}`, {});
     },
 
     actualizarProducto: (id, productoActualizado) => {

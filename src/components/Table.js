@@ -1,4 +1,3 @@
-// Table.js
 import React from 'react';
 
 const Table = ({ data, openEditModal, handleEliminarProducto }) => {

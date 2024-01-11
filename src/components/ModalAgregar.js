@@ -1,4 +1,3 @@
-// AddProductModal.js
 import React from 'react';
 
 const AddProductModal = ({
@@ -31,7 +30,6 @@ const AddProductModal = ({
                         </button>
                     </div>
                     <div className="modal-body">
-                        {/* Formulario para agregar productos */}
                         <form onSubmit={handleAgregarProducto}>
                             <div className="form-group">
                                 <label htmlFor="nombre">Nombre:</label>
