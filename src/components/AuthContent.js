@@ -146,7 +146,7 @@ class AuthContent extends Component {
                     <h2>Productos</h2>
                     <button
                         type="button"
-                        className="btn btn-primary"
+                        className="btn btn-primary mt-3"
                         onClick={this.openModalAgregar}
                     >
                         Agregar

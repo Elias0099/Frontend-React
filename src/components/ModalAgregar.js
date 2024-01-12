@@ -20,22 +20,20 @@ const AddProductModal = ({
                 <div className="modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title">Agregar Producto</h5>
-                        <button
-                            type="button"
-                            className="close"
-                            onClick={closeModalAgregar}
-                            aria-label="Close"
-                        >
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+
+                            <i className="fa-solid fa-xmark"
+                               style={{ cursor: 'pointer' }}
+                               onClick={closeModalAgregar}
+                               aria-label="Close"></i>
+
                     </div>
-                    <div className="modal-body">
+                    <div className="modal-body mt-1">
                         <form onSubmit={handleAgregarProducto}>
                             <div className="form-group">
                                 <label htmlFor="nombre">Nombre:</label>
                                 <input
                                     type="text"
-                                    className="form-control"
+                                    className="form-control mt-2"
                                     id="nombre"
                                     name="nombre"
                                     value={nuevoProducto.nombre}
@@ -43,11 +41,11 @@ const AddProductModal = ({
                                     required
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group mt-2">
                                 <label htmlFor="descripcion">Descripción:</label>
                                 <input
                                     type="text"
-                                    className="form-control"
+                                    className="form-control mt-2"
                                     id="descripcion"
                                     name="descripcion"
                                     value={nuevoProducto.descripcion}
@@ -55,11 +53,11 @@ const AddProductModal = ({
                                     required
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group mt-2">
                                 <label htmlFor="precio">Precio:</label>
                                 <input
                                     type="number"
-                                    className="form-control"
+                                    className="form-control mt-2"
                                     id="precio"
                                     name="precio"
                                     value={nuevoProducto.precio}
@@ -67,11 +65,11 @@ const AddProductModal = ({
                                     required
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group mt-2">
                                 <label htmlFor="stock">Stock:</label>
                                 <input
                                     type="number"
-                                    className="form-control"
+                                    className="form-control mt-2"
                                     id="stock"
                                     name="stock"
                                     value={nuevoProducto.stock}
@@ -79,7 +77,7 @@ const AddProductModal = ({
                                     required
                                 />
                             </div>
-                            <button type="submit" className="btn btn-primary">
+                            <button type="submit" className="btn btn-primary mt-3">
                                 Agregar Producto
                             </button>
                         </form>

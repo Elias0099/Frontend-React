@@ -2,7 +2,7 @@ import React from 'react';
 
 const Table = ({ data, openEditModal, handleEliminarProducto }) => {
     return (
-        <table className="table">
+        <table className="table table-bordered table-striped mt-3" >
             <thead>
             <tr>
                 <th>ID</th>
@@ -25,17 +25,19 @@ const Table = ({ data, openEditModal, handleEliminarProducto }) => {
                         <td>
                             <button
                                 type="button"
-                                className="btn btn-warning mr-2"
+                                className="btn btn-warning "
                                 onClick={() => openEditModal(item)}
                             >
-                                Editar
+                                <i className="fa-solid fa-pen-to-square"></i>
                             </button>
+
+
                             <button
                                 type="button"
-                                className="btn btn-danger"
+                                className="btn btn-danger mx-lg-2"
                                 onClick={() => handleEliminarProducto(item.id)}
                             >
-                                Eliminar
+                                <i className="fa-solid fa-trash"></i>
                             </button>
                         </td>
                     </tr>

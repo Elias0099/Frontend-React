@@ -20,22 +20,19 @@ const EditProductModal = ({
                 <div className="modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title">Editar Producto</h5>
-                        <button
-                            type="button"
-                            className="close"
-                            onClick={closeEditModal}
-                            aria-label="Close"
-                        >
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                        <i className="fa-solid fa-xmark"
+                           style={{ cursor: 'pointer' }}
+                           aria-label="Close"
+                           onClick={closeEditModal}></i>
+
                     </div>
-                    <div className="modal-body">
+                    <div className="modal-body mt-1">
                         <form onSubmit={handleEditarProducto}>
                             <div className="form-group">
                                 <label htmlFor="nombre">Nombre:</label>
                                 <input
                                     type="text"
-                                    className="form-control"
+                                    className="form-control mt-2"
                                     id="nombre"
                                     name="nombre"
                                     value={productoEditado ? productoEditado.nombre : ''}
@@ -43,11 +40,11 @@ const EditProductModal = ({
                                     required
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group mt-2">
                                 <label htmlFor="descripcion">Descripción:</label>
                                 <input
                                     type="text"
-                                    className="form-control"
+                                    className="form-control mt-2"
                                     id="descripcion"
                                     name="descripcion"
                                     value={productoEditado ? productoEditado.descripcion : ''}
@@ -55,11 +52,11 @@ const EditProductModal = ({
                                     required
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group mt-2">
                                 <label htmlFor="precio">Precio:</label>
                                 <input
                                     type="number"
-                                    className="form-control"
+                                    className="form-control mt-2"
                                     id="precio"
                                     name="precio"
                                     value={productoEditado ? productoEditado.precio : ''}
@@ -67,11 +64,11 @@ const EditProductModal = ({
                                     required
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group mt-2">
                                 <label htmlFor="stock">Stock:</label>
                                 <input
                                     type="number"
-                                    className="form-control"
+                                    className="form-control mt-2"
                                     id="stock"
                                     name="stock"
                                     value={productoEditado ? productoEditado.stock : ''}
@@ -79,7 +76,7 @@ const EditProductModal = ({
                                     required
                                 />
                             </div>
-                            <button type="submit" className="btn btn-primary">
+                            <button type="submit" className="btn btn-primary mt-3">
                                 Guardar Cambios
                             </button>
                         </form>
